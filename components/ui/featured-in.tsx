@@ -1,4 +1,7 @@
-import MySwiper from "./swiper";
+"use client";
+import dynamic from "next/dynamic";
+
+const MySwiper = dynamic(() => import("./swiper"), { ssr: false });
 
 export function FeaturedIn() {
   return (
@@ -6,7 +9,7 @@ export function FeaturedIn() {
       <h1 className="text-center text-sm md2:text-xl tracking-[2.2px] font-semibold">
         AS FEATURED IN
       </h1>
-      {/* <MySwiper /> */}
+      <MySwiper />
     </div>
   );
 }
