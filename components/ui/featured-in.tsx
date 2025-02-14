@@ -1,13 +1,8 @@
-"use client";
-
-import dynamic from "next/dynamic";
-import React from "react";
-
-const MySwiper = dynamic(() => import("../ui/swiper"), { ssr: false });
+import MySwiper from "./swiper";
 
 export function FeaturedIn() {
   return (
-    <div className=" rounded-md flex-1 flex flex-col antialiased items-center  relative overflow-hidden opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+    <div className="rounded-md flex-1 flex flex-col antialiased items-center  relative overflow-hidden opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
       <h1 className="text-center text-sm md2:text-xl tracking-[2.2px] font-semibold">
         AS FEATURED IN
       </h1>

@@ -1,12 +1,10 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
-
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 import { Autoplay, Navigation } from "swiper/modules";
+
+import Image from "next/image";
 import { featured } from "@/lib/data";
 
 export default function MySwiper() {
