@@ -13,6 +13,10 @@ export default function MySwiper() {
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+
+  if (!isLoaded) {
+    return null;
+  }
   return (
     <div className="w-full max-w-[850px] pt-5 flex items-center justify-center">
       <Swiper
@@ -32,7 +36,7 @@ export default function MySwiper() {
       >
         {featured.map((referance, idx) => (
           <SwiperSlide
-            className=" h-[50px] grid justify-items-center self-center  "
+            className="h-[50px] grid justify-items-center self-center  "
             key={idx}
           >
             <img
