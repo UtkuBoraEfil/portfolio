@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.bg-hero {
+  background-image: url("/images/background_weird_boxes.jpg");
+}
+
+.bg-profile{
+  background-image: url("/images/mark_portrait_circle.webp");
+}
+
+.bg-gradient-hero{
+  background-image: linear-gradient(180deg,#00000012 60%,#1a191d 100%);
+  height: 102%;
+}
+
+.yellow_circle {
+  box-shadow: inset 0 0 30px 0 #fff, inset 20px 0 30px #ffd400,
+    inset -20px 0 30px red, inset 20px 0 300px #ff40d6,
+    inset -20px 0 300px #e3ff4b, 0 0 50px #fff, -10px 0 100px #fbff00,
+    10px 0 80px #f55;
+}
+
+.child{
+  animation: left-to-right 2s ease-in-out forwards infinite alternate;
+}
+
+.underline-red::after{
+  transition: all 0.1s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 13.5%;
+  z-index: -1;
+  height: 0.3em;
+  width: 104%;
+  left: -1%;
+  background: linear-gradient(65deg, #DF058D 0%, #DF058D 100%, rgba(255, 209, 0, 0) 100%);
+}
+.underline-blue::after{
+  transition: all 0.1s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 13.5%;
+  z-index: -1;
+  height: 0.3em;
+  width: 104%;
+  left: -1%;
+  background: linear-gradient(65deg, #2C49D8 0%, #2C49D8 100%, rgba(255, 209, 0, 0) 100%);
+}
+.underline-orange::after{
+  transition: all 0.1s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 13.5%;
+  z-index: -1;
+  height: 0.3em;
+  width: 104%;
+  left: -1%;
+  background: linear-gradient(65deg, #FF6B2B 0%, #FF6B2B 100%, rgba(255, 209, 0, 0) 100%);
+}
+
+.underline-purple::after{
+    transition: all 0.1sease-in-out;
+    content: "";
+    position: absolute;
+    bottom: 13.5%;
+    z-index: -1;
+    height: 0.3em;
+    width: 104%;
+    left: -1%;
+    background: linear-gradient(65deg, #9440e8 0%, #9440e8 100%, rgba(255, 209, 0, 0) 100%);
+    transition: all 0.3s ease-in-out;
+    ;
+}
+
+.underline-purple:hover::after{
+  height: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.work-card-bg{
+  background-color: rgba(136, 136, 136, .05);
+}
+
+.work-card-parent
+
+.work-card-show-project{
+  transition: all 0.2s ease-in-out;
+  transform: translateY(50%);
+  opacity: 0%;
+  animation: project-return 0.5s forwards;
+}
+
+.work-card-category{
+  transition: all 0.2s ease-in-out;
+  animation:  category-return 0.5s forwards;
+}
+
+.work-card-parent:hover .work-card-show-project{
+  animation: up-to-down 0.5s forwards;
+  opacity: 100%;
+
+}
+
+
+.work-card-parent:hover .work-card-category{
+  animation: down-to-up 0.5s forwards;
+}
+
+
+
+.work-card-children{
+  transition: all 0.3s ease-in-out;
+}
+
+.work-card-parent:hover .work-card-children{
+  transform: scale(1.1);
+}
+
+
+.work-card-show-project:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: currentColor;
+  top: 50%;
+  right: -55px;
+}
+
+@keyframes left-to-right{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(30%)
+  }
+}
+
+@keyframes down-to-up{
+  0%{
+    transform: translateY(0);
+    opacity: 100%;
+  }
+  100%{
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+}
+
+@keyframes up-to-down{
+  0%{
+    transform: translateY(100%);
+    opacity: 0%;
+  }
+  100%{
+    transform: translateY(-100%);
+    opacity: 100%;
+  }
+}
+
+@keyframes project-return{
+  0%{
+    transform: translateY(-100%);
+    opacity: 100%;
+  }
+  100%{
+    transform: translateY(100%);
+    opacity: 0%;
+  }
+}
+
+@keyframes category-return{
+  0%{
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100%{
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+
+
+
