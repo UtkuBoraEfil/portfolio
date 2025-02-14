@@ -107,3 +107,15 @@ export const works = [
     card_design: "type1",
   },
 ];
+
+export const featured = [
+  "/images/featured/WeAreDevelopers-logo.svg",
+  "/images/featured/careerfoundry-logo.svg",
+  "/images/featured/colorlib-logo.svg",
+  "/images/featured/featured.com-logo.svg",
+  "/images/featured/frontend-mentor-logo.svg",
+  "/images/featured/masai-logo.svg",
+  "/images/featured/hostinger-logo.svg",
+  "/images/featured/logo-bdwd.png",
+  "/images/featured/upwork-logo.svg",
+];

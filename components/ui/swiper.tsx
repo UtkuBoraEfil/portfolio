@@ -7,20 +7,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Navigation } from "swiper/modules";
+import { featured } from "@/lib/data";
 
-const featured = [
-  "/images/featured/WeAreDevelopers-logo.svg",
-  "/images/featured/careerfoundry-logo.svg",
-  "/images/featured/colorlib-logo.svg",
-  "/images/featured/featured.com-logo.svg",
-  "/images/featured/frontend-mentor-logo.svg",
-  "/images/featured/masai-logo.svg",
-  "/images/featured/hostinger-logo.svg",
-  "/images/featured/logo-bdwd.png",
-  "/images/featured/upwork-logo.svg",
-];
-
-export function MySwiper() {
+export default function MySwiper() {
   return (
     <div className="w-full max-w-[850px] pt-5 flex items-center justify-center">
       <Swiper
