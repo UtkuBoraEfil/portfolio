@@ -35,7 +35,7 @@ export default function MySwiper() {
             className=" h-[50px] grid justify-items-center self-center  "
             key={idx}
           >
-            <Image
+            <img
               src={referance}
               className="object-contain  w-auto max-h-[50px] max-w-[98px]"
               alt="references"
