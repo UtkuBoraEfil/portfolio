@@ -6,7 +6,7 @@ interface WorkCardProps {
   category: string;
   card_design: string;
 }
-export function Work_Card({
+export function WorkCard({
   title,
   image,
   category,

@@ -2,7 +2,7 @@
 import { ArrowRight } from "lucide-react";
 import { useSwiper } from "swiper/react";
 
-export function Navigate_right() {
+export function NavigateRight() {
   const swiper = useSwiper();
   return (
     <button onClick={() => swiper.slideNext()} className="">

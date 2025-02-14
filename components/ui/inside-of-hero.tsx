@@ -1,5 +1,5 @@
 import { FeaturedIn } from "./featured-in";
-import { MyName } from "./my_name";
+import { MyName } from "./my-name";
 import { ScrollDown } from "./scroll-down";
 
 
