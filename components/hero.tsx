@@ -8,7 +8,7 @@ export function Hero() {
       <Navbar />
       <YellowCircle />
       <div className="absolute w-full bg-gradient-hero">
-        {/* <InsideOfHero /> */}
+        <InsideOfHero />
       </div>
     </section>
   );
