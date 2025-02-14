@@ -10,7 +10,7 @@ export function InsideOfHero() {
         <MyName />
       </div>
       <FeaturedIn />
-      <ScrollDown />
+      {/* <ScrollDown /> */}
     </div>
   );
 }
