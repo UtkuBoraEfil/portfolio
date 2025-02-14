@@ -1,7 +1,4 @@
-"use client";
-import dynamic from "next/dynamic";
-
-const MySwiper = dynamic(() => import("./swiper"), { ssr: false });
+import MySwiper from "./swiper";
 
 export function FeaturedIn() {
   return (
