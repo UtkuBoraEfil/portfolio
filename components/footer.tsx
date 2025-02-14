@@ -85,7 +85,7 @@ export function Footer() {
             <h2 className="text-lg font-semibold">- Arda Kaan Aydilek</h2>
             <p className="text-sm opacity-80">founder of speed-up youtube channel</p>
             </div>
-            <div className="w-full min-h-full p-8 bg-[#923fe6] ">
+            <div className="w-full h-full lg:h-auto p-8 bg-[#923fe6] ">
             <div className="flex justify-end relative">
               <Image
                 src={"/images/quote-icon.png"}
