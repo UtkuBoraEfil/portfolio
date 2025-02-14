@@ -1,7 +1,9 @@
+"use client";
+import dynamic from "next/dynamic";
 import { FeaturedIn } from "./featured-in";
 import { MyName } from "./my-name";
-import { ScrollDown } from "./scroll-down";
 
+const ScrollDown = dynamic(() => import("./scroll-down"), { ssr: false });
 export function InsideOfHero() {
   return (
     <div className="w-full h-screen flex flex-col ">
@@ -10,7 +12,7 @@ export function InsideOfHero() {
         <MyName />
       </div>
       <FeaturedIn />
-      {/* <ScrollDown /> */}
+      <ScrollDown />
     </div>
   );
 }
