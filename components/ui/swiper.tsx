@@ -1,13 +1,18 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-
 import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
 
 import Image from "next/image";
 import { featured } from "@/lib/data";
+import { useEffect, useState } from "react";
 
 export default function MySwiper() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
   return (
     <div className="w-full max-w-[850px] pt-5 flex items-center justify-center">
       <Swiper
