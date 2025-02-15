@@ -1,5 +1,6 @@
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -8,6 +9,8 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { roboto } from "@/app/fonts";
+import Link from "next/link";
+import { menu_items } from "@/lib/data";
 
 export function Hamburger() {
   return (
@@ -20,15 +23,20 @@ export function Hamburger() {
         <SheetDescription></SheetDescription>
         <SheetHeader></SheetHeader>
         <div className="py-14 pr-10">
-          <ul
+          <div
             className={`${roboto.className} text-start space-y-4 text-lg font-medium`}
           >
-            <li>//home</li>
-            <li>//expertise</li>
-            <li>//work</li>
-            <li>//experience</li>
-            <li>//contact</li>
-          </ul>
+            {menu_items.map((item) => (
+
+                <Link
+                  href={item.href}
+                  key={item.id}
+                >
+                  <p className=" ">{`// ${item.title}`}</p>
+                </Link>
+
+            ))}
+          </div>
         </div>
       </SheetContent>
     </Sheet>

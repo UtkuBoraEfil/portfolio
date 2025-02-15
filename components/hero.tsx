@@ -4,7 +4,7 @@ import { InsideOfHero } from "./ui/inside-of-hero";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen min-w-full bg-cover bg-no-repeat bg-center bg-hero ">
+    <section className="relative min-h-screen min-w-full bg-cover bg-no-repeat bg-center bg-hero " id="home">
       <Navbar />
       <YellowCircle />
       <div className="absolute w-full bg-gradient-hero">

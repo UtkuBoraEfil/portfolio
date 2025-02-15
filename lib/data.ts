@@ -119,3 +119,31 @@ export const featured = [
   "/images/featured/logo-bdwd.png",
   "/images/featured/upwork-logo.svg",
 ];
+
+export const menu_items = [
+  {
+    id: 1,
+    title: "home",
+    href: "/",
+  },
+  {
+    id: 2,
+    title: "expertise",
+    href: "#expertise",
+  },
+  {
+    id: 3,
+    title: "work",
+    href: "#work",
+  },
+  {
+    id: 4,
+    title: "experience",
+    href: "#experience",
+  },
+  {
+    id: 5,
+    title: "contact",
+    href: "#contact",
+  },
+];

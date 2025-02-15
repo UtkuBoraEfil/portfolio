@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <div className="flex w-full flex-col-reverse lg:flex-row">
+    <div className="flex w-full flex-col-reverse lg:flex-row " id="contact">
       <div
         className={`lg:w-[45%] ${roboto.className} bg-[#0e0e0e] min-h-full flex flex-col py-20 px-8 `}
       >

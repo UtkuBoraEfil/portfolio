@@ -7,7 +7,7 @@ const works_right = [works[2], works[4], works[6], works[7], works[9]];
 const works_left = [works[0], works[1], works[3], works[5], works[8]];
 export function MyWorks() {
   return (
-    <div className=" max-w-[1220px] mx-auto ">
+    <div className=" max-w-[1220px] mx-auto scroll-mt-20" id="work">
       <VideoWork />
       <div className="flex pb-14 text-xs mx2:text-base text-[ffffffbf] opacity-80">
         <p>Filter by</p>

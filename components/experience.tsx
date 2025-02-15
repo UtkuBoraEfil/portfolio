@@ -14,7 +14,7 @@ export function Experience() {
     setActive(index);
   }
   return (
-    <div className="mx-auto py-10 max-w-[750px] pt-40">
+    <div className="mx-auto py-10 max-w-[750px] pt-40 scroll-mt-20" id="experience">
       <h1 className="text-center text-4xl md2:text-6xl font-semibold">
         Professional
         <br />

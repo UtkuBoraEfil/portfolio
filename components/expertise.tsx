@@ -12,7 +12,7 @@ const robotoMono = Roboto_Mono({
 export function Expertise() {
   return (
     <>
-      <h1 className=" text-7xl font-semibold text-center pb-10">
+      <h1 className=" text-7xl font-semibold text-center pb-10 scroll-mt-52" id="expertise">
         My Expertise
       </h1>
       <div className="flex w-full justify-start max-w-[1100px] flex-wrap mx-auto ">
