@@ -9,26 +9,26 @@ export function MyWorks() {
   return (
     <div className=" max-w-[1220px] mx-auto ">
       <VideoWork />
-      <div className="flex pb-14 text-base text-[ffffffbf] opacity-80">
+      <div className="flex pb-14 text-xs mx2:text-base text-[ffffffbf] opacity-80">
         <p>Filter by</p>
         <div className=" flex ">
-          <button className="mx-4 relative hover:text-[#66d9ed] transition-all duration-500">
+          <button className="mx-3 md2:mx-4 relative hover:text-[#66d9ed] transition-all duration-500">
             All{" "}
-            <span className="text-xs absolute -top-2 px-1">{works.length}</span>
+            <span className=" text-[10px] md2:text-xs absolute -top-2 px-1">{works.length}</span>
           </button>
           <p>/</p>
         </div>
         <div className="flex">
-          <button className="mx-4 relative hover:text-[#66d9ed] transition-all duration-500">
+          <button className="mx-3 md2:mx-4 relative hover:text-[#66d9ed] transition-all duration-500">
             Data Visualization{" "}
-            <span className="text-xs absolute -top-2 px-1">{works.length}</span>
+            <span className="text-[10px] md2:text-xs absolute -top-2 px-1">{works.length}</span>
           </button>
           <p>/</p>
         </div>
         <div className="flex">
-          <button className="mx-4 relative hover:text-[#66d9ed] transition-all duration-500">
+          <button className="mx-3 md2:mx-4 relative hover:text-[#66d9ed] transition-all duration-500">
             Web Development{" "}
-            <span className="text-xs absolute -top-2 px-1">{works.length}</span>
+            <span className="text-[10px] md2:text-xs absolute -top-2 px-1">{works.length}</span>
           </button>
         </div>
       </div>

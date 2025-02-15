@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+
 import "./globals.css";
 
 import { cn } from "@/lib/utils";
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(`${inter.className} bg-[rgb(26,25,29)] text-white`)}>{children}</body>
+      <body className={cn(`${inter.className} bg-[#1a191d] text-white`)}>{children}</body>
     </html>
   );
 }
