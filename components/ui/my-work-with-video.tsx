@@ -23,10 +23,11 @@ export function VideoWork() {
           width={850}
           preload="false"
           playsInline
-          className=" md:absolute  h-auto min-w-[600px]  md2:min-w-[850px]  "
+          className=" md:absolute  h-auto min-w-[600px]  md2:min-w-[850px]  bg-transparent"
           autoPlay
           muted
           loop
+          style={{background: "transparent"}}
         >
           <source src="/video/out.webm" type="video/webm" />
         </video>
