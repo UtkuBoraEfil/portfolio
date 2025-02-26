@@ -27,14 +27,14 @@ export function Footer() {
               </span>
             </h2>
             <ul className="py-3 text-xl tracking-widest">
-              <li>
-                <a href="">Linkedin</a>
+              <li className="hover:text-[#66d9ed] transition-all duration-500">
+                <a href="https://www.linkedin.com/in/utku-bora-efil-51147b31a/">Linkedin</a>
               </li>
-              <li>
-                <a href="">Github</a>
+              <li className="hover:text-[#66d9ed] transition-all duration-500">
+                <a href="https://github.com/UtkuBoraEfil">Github</a>
               </li>
-              <li>
-                <a href="">Instagram</a>
+              <li className="hover:text-[#66d9ed] transition-all duration-500">
+                <a href="https://www.instagram.com/utqbora/">Instagram</a>
               </li>
             </ul>
           </div>
