@@ -5,17 +5,19 @@ interface WorkCardProps {
   image: string;
   category: string;
   card_design: string;
+  link: string;
 }
 export function WorkCard({
   title,
   image,
   category,
   card_design,
+  link,
 }: WorkCardProps) {
   return (
     <>
       {card_design === "type1" ? (
-        <div className="rounded-[5px]  max-w-[380px] max-h-[436px] overflow-hidden work-card-parent">
+        <a href={link} className="rounded-[5px]  max-w-[380px] min-w-[380px] max-h-[436px] overflow-hidden work-card-parent">
           <div className="h-[285px] overflow-hidden">
             <Image
               className="w-full h-full object-cover object-center work-card-children "
@@ -38,9 +40,9 @@ export function WorkCard({
               Show Project
             </h4>
           </div>
-        </div>
+        </a>
       ) : (
-        <div className="rounded-[5px] forworks:w-full w-[380px]  h-[436px] lg:!h-[674px]   overflow-hidden work-card-parent">
+        <a href={link} className="rounded-[5px] forworks:w-full w-[380px]  h-[436px] lg:!h-[674px]   overflow-hidden work-card-parent">
           <div className=" overflow-hidden">
             <Image
               className="lg:w-full h-[285px] lg:h-auto work-card-children"
@@ -63,7 +65,7 @@ export function WorkCard({
               Show Project
             </h4>
           </div>
-        </div>
+        </a>
       )}
     </>
   );

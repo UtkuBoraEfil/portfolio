@@ -54,7 +54,7 @@ export function ExperienceCard({
             />
             <a href={experience.website}>{experience.website}</a>
           </div>
-          <div className="w-full flex flex-col-reverse md2:flex-row justify-between pt-5">
+          <div className="w-full flex flex-col md2:flex-row justify-between gap-5 pt-5">
             <div>
               <p className="leading-6 opacity-85">{experience.description}</p>
               <div className="flex gap-2 mt-5">
@@ -68,9 +68,11 @@ export function ExperienceCard({
                 ))}
               </div>
             </div>
-            <div>
-              {/* <img src={experience.image} alt="" className=" rounded-md"/> */}
-            </div>
+            {experience.image && (
+              <div>
+              <img src={experience.image} alt="" className="w-24 hidden md2:block rounded-md" />
+              </div>
+            )}
           </div>
         </div>
       </div>

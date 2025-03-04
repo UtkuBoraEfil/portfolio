@@ -32,7 +32,7 @@ export function Expertise() {
             <h2
               className={`${robotoMono.className} font-normal leading-6 pl-3 text-base border-l-2 border-white border-opacity-30 `}
             >
-              Experienced in both functional and OOP: Dart, Python, Java,
+              Experienced in both functional and OOP: C, C++, C#,
               JavaScript, TypeScript.
             </h2>
           </div>
