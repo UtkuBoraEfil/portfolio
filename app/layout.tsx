@@ -9,7 +9,7 @@ const inter = Poppins({ weight: "400", subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
-  title: "UTKU BORA EFIL",
+  title: "utkuboraefil",
   description: "my personal website",
 };
 
