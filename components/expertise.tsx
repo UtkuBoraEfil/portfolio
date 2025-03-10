@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import { ReactIcon } from "@/components/icons/react";
 import { Monitor } from "@/components/icons/monitor";
 import { Figma } from "lucide-react";
@@ -9,14 +11,49 @@ const robotoMono = Roboto_Mono({
   weight: ["400", "700"],
 });
 
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.3, // Delay between each child animation
+      duration: 0.5,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 export function Expertise() {
   return (
     <>
-      <h1 className=" text-7xl font-semibold text-center pb-10 scroll-mt-52" id="expertise">
-        My Expertise
-      </h1>
-      <div className="flex w-full justify-start max-w-[1100px] flex-wrap mx-auto ">
-        <div className="px-8 py-10 flex-1 flex-shrink w-full border-[3px] min-h-7 border-solid border-r-[1.5px] border-[#a3a3a3] text-[26px]  leading-[1.2em]">
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
+        <h1
+          className=" text-7xl font-semibold text-center pb-10 scroll-mt-52"
+          id="expertise"
+        >
+          My Expertise
+        </h1>
+      </motion.div>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.7 }}
+        className="flex w-full justify-start max-w-[1100px] flex-wrap mx-auto "
+      >
+        <motion.div
+          variants={itemVariants}
+          className="px-8 py-10 flex-1 flex-shrink w-full border-[3px] min-h-7 border-solid border-r-[1.5px] border-[#a3a3a3] text-[26px]  leading-[1.2em]"
+        >
           <div className="flex gap-6 ">
             <Monitor />
             <h2 className="font-semibold inline-block align-top">
@@ -32,15 +69,18 @@ export function Expertise() {
             <h2
               className={`${robotoMono.className} font-normal leading-6 pl-3 text-base border-l-2 border-white border-opacity-30 `}
             >
-              Experienced in both functional and OOP: C, C++, C#,
-              JavaScript, TypeScript.
+              Experienced in both functional and OOP: C, C++, C#, JavaScript,
+              TypeScript.
             </h2>
           </div>
           <h3
             className={`text-sm opacity-30 ${robotoMono.className}`}
           >{`</h3>`}</h3>
-        </div>
-        <div className="px-8 py-10 flex-1 w-full border-[3px] min-h-7 border-solid border-x-[1.5px] border-[#a3a3a3] text-[26px]  leading-[1.2em]">
+        </motion.div>
+        <motion.div
+          variants={itemVariants}
+          className="px-8 py-10 flex-1 w-full border-[3px] min-h-7 border-solid border-x-[1.5px] border-[#a3a3a3] text-[26px]  leading-[1.2em]"
+        >
           <div className="flex gap-10">
             <ReactIcon />
             <h2 className="font-semibold inline-block align-top">
@@ -65,8 +105,11 @@ export function Expertise() {
           <h3
             className={`text-sm opacity-30 ${robotoMono.className}`}
           >{`</h3>`}</h3>
-        </div>
-        <div className="px-8 py-10 flex-1 w-full border-[3px] border-l-[1.5px] min-w-[280px] min-h-7 border-solid  border-[#a3a3a3] text-[26px]  leading-[1.2em]">
+        </motion.div>
+        <motion.div
+          variants={itemVariants}
+          className="px-8 py-10 flex-1 w-full border-[3px] border-l-[1.5px] min-w-[280px] min-h-7 border-solid  border-[#a3a3a3] text-[26px]  leading-[1.2em]"
+        >
           <div className="flex gap-10">
             <Figma className="w-10 h-10 stroke-[1.2px]" />
             <h2 className="font-semibold inline-block align-top">
@@ -89,7 +132,7 @@ export function Expertise() {
           <h3
             className={`text-sm opacity-30 ${robotoMono.className}`}
           >{`</h3>`}</h3>
-        </div>
+        </motion.div>
         <div className="hidden sm:block md:hidden px-8 py-10 flex-1 w-full min-h-7">
           <div className="ml-1 pl-4 border-l-8 border-[#b7f] ">
             <h2 className="text-3xl font-semibold">
@@ -100,7 +143,7 @@ export function Expertise() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="w-full  relative -top-10">
         <Image
           src={"/images/hello-world.webp"}

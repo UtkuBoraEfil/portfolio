@@ -68,7 +68,7 @@ export function ExperienceCard({
                 ))}
               </div>
             </div>
-            {experience.image && (
+            {experience.image && experience.image.trim() !== "" && (
               <div>
               <img src={experience.image} alt="" className="w-24 hidden md2:block rounded-md" />
               </div>

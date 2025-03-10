@@ -7,7 +7,7 @@ export const professionalExperience = [
     website: "https://www.notuscreative.com/tr",
     description:
       "Internship at Notus Creative, a digital agency specializing in web development and design. Worked on a variety of projects, including the development of a sports app, a mobile app for a local restorant, ",
-    image: "/images/experience-1.jpg",
+    image: "",
     areas: ["Nextjs", "React", "HTML", "CSS","JavaScript", "TypeScript"],
   },
   {
