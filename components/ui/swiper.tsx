@@ -28,13 +28,16 @@ export default function MySwiper() {
             className="h-[50px] grid justify-items-center self-center  "
             key={idx}
           >
+            <a href={referance.link} className="object-contain w-auto max-h-[50px] max-w-[98px] text-white">
+
             <img
-              src={referance}
-              className="object-contain  w-auto max-h-[50px] max-w-[98px]"
+              src={referance.img}
+              className="object-contain w-auto max-h-[50px] max-w-[98px] text-white"
               alt="references"
               width={98}
               height={50}
             />
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>
