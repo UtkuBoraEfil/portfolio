@@ -1,3 +1,5 @@
+//data.ts
+
 export const professionalExperience = [
   {
     title: "Internship",
