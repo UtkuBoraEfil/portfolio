@@ -28,8 +28,9 @@ export function Footer() {
           </motion.div>
           <motion.div
             initial={{ y: 50, opacity: 0 }}
-            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 }  }}
-            viewport={{ once: true, amount: 0.5 }}>
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <h2 className="text-3xl cursor-pointer ">
               <span className="underline-purple relative z-10">
                 utqbora@hotmail.com
@@ -62,23 +63,27 @@ export function Footer() {
                 alt="quote"
                 className="opacity-70 absolute left-0 top-0"
               />
-              <div className="rounded-full w-20 h-20 object-cover bg-center overflow-hidden border border-white bg-profile"></div>
+              <Image
+                src={"/images/referances/ardakaan.jpg"}
+                height={40}
+                width={50}
+                alt="quote"
+                className="rounded-full w-20 h-20 object-cover bg-center overflow-hidden border border-white "
+              />
             </div>
             <p className="py-10 opacity-80">
-              Since 2018 Tamal has been responsible for the development of our
-              website which has been instrumental to the growth of our company.
-              Even while working remotely he’s been highly responsive, organized
-              and strategic in his thinking. In addition to staying on top of
-              day-to-day site changes and builds, he’s provided us with great
-              advice to stay on top of the current changes in web technologies.
-              He’s also implemented effective project management and Q&A
-              processes. As a result Tamal has been an highly valued and
-              impactful member of our team.
+              During his time working under my supervision, Utku consistently
+              impressed me with his curiosity, reliability, and technical
+              ability. He quickly adapted to our team. His willingness to learn
+              and improve was evident every day, and he frequently asked
+              thoughtful questions that demonstrated a deeper understanding of
+              web development principles. He always maintained a professional
+              attitude and showed a strong sense of responsibility. I have no
+              doubt that he will continue to grow and become a valuable asset
+              wherever he works.
             </p>
             <h2 className="text-lg font-semibold">- Arda Kaan Aydilek</h2>
-            <p className="text-sm opacity-80">
-              founder of speed-up youtube channel
-            </p>
+            <p className="text-sm opacity-80">Full-Stack web developer</p>
           </div>
           <div className="sm:w-[55%] min-h-full">
             <div className="w-full p-8 bg-[#0067dc]">
@@ -90,15 +95,24 @@ export function Footer() {
                   alt="quote"
                   className="opacity-70 absolute left-0 top-0"
                 />
-                <div className="rounded-full w-20 h-20 object-cover bg-center overflow-hidden border border-white bg-profile"></div>
+                <Image
+                  src={"/images/referances/burakbey.jpg"}
+                  height={40}
+                  width={50}
+                  alt="quote"
+                  className="rounded-full w-20 h-20 object-cover bg-center overflow-hidden border border-white "
+                />
               </div>
               <p className="py-10 opacity-80">
-                Utku kesinlikle HARIKA. Kendisi en sevdigim kuzenim olur. Muthis
-                bir insan. Herkesin boyle bir kuzeni olmali.
+                Utku joined us as an intern and made a strong impression with
+                his eagerness to contribute, quick learning curve, and clear
+                passion for development. He approached his tasks with discipline
+                and creative thinking, which made him stand out from the
+                beginning.
               </p>
-              <h2 className="text-lg font-semibold">- Arda Kaan Aydilek</h2>
+              <h2 className="text-lg font-semibold">- Burak Ustaoğlu</h2>
               <p className="text-sm opacity-80">
-                founder of speed-up youtube channel
+                Founder of Notus Creative Works
               </p>
             </div>
             <div className="w-full h-full lg:h-auto p-8 bg-[#923fe6] ">
@@ -110,18 +124,22 @@ export function Footer() {
                   alt="quote"
                   className="opacity-70 absolute left-0 top-0"
                 />
-                <div className="rounded-full w-20 h-20 object-cover bg-center overflow-hidden border border-white bg-profile"></div>
+                <Image
+                  src={"/images/referances/ardakaan.jpg"}
+                  height={40}
+                  width={50}
+                  alt="quote"
+                  className="rounded-full w-20 h-20 object-cover bg-center overflow-hidden border border-white "
+                />
               </div>
               <p className="py-10 opacity-80">
-                Tamal is one of the best professionals that we have known in web
-                development skills. Between his skills you can find good
-                communication and accuracy with the planning in complex
-                projects.
+                I've known Utku for a few years and we've worked together on
+                multiple university projects. He's always been reliable,
+                collaborative, and great at finding smart solutions under
+                pressure.
               </p>
-              <h2 className="text-lg font-semibold">- Arda Kaan Aydilek</h2>
-              <p className="text-sm opacity-80">
-                founder of speed-up youtube channel
-              </p>
+              <h2 className="text-lg font-semibold">- </h2>
+              <p className="text-sm opacity-80"></p>
             </div>
           </div>
         </div>

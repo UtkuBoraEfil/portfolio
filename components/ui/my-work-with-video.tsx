@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export function VideoWork() {
   return (
-    <div className="flex md:gap-16 md:flex-row flex-col  justify-between mb-20">
-      <div className="md:w-2/5 py-16">
+    <div className="flex md:gap-16 md:flex-row flex-col  justify-between md:mb-20">
+      <div className="md:w-2/5 "> 
         <h2 className="text-6xl md2:text-[105px] font-semibold leading-[1.2em] mb-6">
           My
           <br /> Work
         </h2>
-        <p
+        {/* <p
           className={` ${roboto.className} text-lg md2:text-xl font-medium opacity-85 tracking-wider`}
         >
           Deployed scalable travel, event and telemedicine web and hybrid mobile
@@ -45,7 +45,7 @@ export function VideoWork() {
           >
             View Project
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
