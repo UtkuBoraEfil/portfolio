@@ -10,7 +10,7 @@ export const professionalExperience = [
     description:
       "Internship at Notus Creative, a digital agency specializing in web development and design. Worked on a variety of projects, including the development of a sports app, a mobile app for a local restorant, ",
     image: "",
-    areas: ["Nextjs", "React", "HTML", "CSS","JavaScript", "TypeScript"],
+    areas: ["Nextjs", "React", "HTML", "CSS", "JavaScript", "TypeScript"],
   },
   {
     title: "University",
@@ -21,9 +21,8 @@ export const professionalExperience = [
     image: "/images/featured/cankaya.png",
     description:
       "Studying Computer Engineering at Cankaya University. Currently in the 3rd year of the program. ",
-    areas: ["C", "C++", "C#", ],
+    areas: ["C", "C++", "C#"],
   },
-
 ];
 
 export const works = [
@@ -53,7 +52,7 @@ export const works = [
     image: "/images/works/revesport.png",
     category: "Web Design",
     card_design: "type2",
-    link: "https://www.reve-sport.com/",
+    link: "https://revesports.vercel.app/",
   },
 
   {
@@ -105,20 +104,40 @@ export const works = [
     card_design: "type1",
     link: "https://utkuboraefil.github.io/diceGame/",
   },
-  
 ];
 
-export const works_right = [works[2], works[7], works[8], works[9], works[10], ]
-export const works_left = [works[0], works[1], works[3], works[4], works[5], works[6]]
+export const works_right = [works[2], works[7], works[8], works[9], works[10]];
+export const works_left = [
+  works[0],
+  works[1],
+  works[3],
+  works[4],
+  works[5],
+  works[6],
+];
 
 export const featured = [
-  { img: "/images/featured/Linkedin.png", link: "https://www.linkedin.com/in/utku-bora-efil-51147b31a/" },
-  { img: "/images/featured/hostinger-logo.svg", link: "https://hpanel.hostinger.com/" },
-  { img: "/images/featured/GitHub_Logo_White.png", link: "https://github.com/UtkuBoraEfil" },
-  { img: "/images/featured/vercel-logotype-dark.png", link: "https://vercel.com/utku-bora-efils-projects" },
+  {
+    img: "/images/featured/Linkedin.png",
+    link: "https://www.linkedin.com/in/utku-bora-efil-51147b31a/",
+  },
+  {
+    img: "/images/featured/hostinger-logo.svg",
+    link: "https://hpanel.hostinger.com/",
+  },
+  {
+    img: "/images/featured/GitHub_Logo_White.png",
+    link: "https://github.com/UtkuBoraEfil",
+  },
+  {
+    img: "/images/featured/vercel-logotype-dark.png",
+    link: "https://vercel.com/utku-bora-efils-projects",
+  },
   { img: "/images/featured/frontend-mentor-logo.svg", link: "" },
-  { img: "/images/featured/upwork-logo.svg", link: "https://www.upwork.com/freelancers/~01619eb6dad5563f37?viewMode=1" },
-
+  {
+    img: "/images/featured/upwork-logo.svg",
+    link: "https://www.upwork.com/freelancers/~01619eb6dad5563f37?viewMode=1",
+  },
 ];
 
 export const menu_items = [
