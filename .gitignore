@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# local working notes, not for the public repo
+/PORTFOLIO_CONTEXT.md
+
 # debug
 npm-debug.log*
 yarn-debug.log*

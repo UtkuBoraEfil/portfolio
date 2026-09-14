@@ -1,5 +1,6 @@
 import { Hero } from "@/components/hero";
 import { Expertise } from "@/components/expertise";
+import { PetverseShowcase } from "@/components/petverse-showcase";
 import { MyWorks } from "@/components/my-works";
 import { Experience } from "@/components/experience";
 import { Footer } from "@/components/footer";
@@ -12,6 +13,7 @@ export default function Home() {
     </div>
     <div className=" px-5 md2:px-[50px] pt-32 pb-32 overflow-hidden">
       <Expertise/>
+      <PetverseShowcase/>
       <MyWorks/>
       <Experience/>
     </div>
