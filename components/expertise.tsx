@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { ReactIcon } from "@/components/icons/react";
 import { Monitor } from "@/components/icons/monitor";
-import { Figma } from "lucide-react";
+import { Figma, Server, Database } from "lucide-react";
 import { Roboto_Mono } from "next/font/google";
 import Image from "next/image";
 
@@ -57,9 +57,9 @@ export function Expertise() {
           <div className="flex gap-6 ">
             <Monitor />
             <h2 className="font-semibold inline-block align-top">
-              <span className="z-10 relative underline-red">Software</span>
+              <span className="z-10 relative underline-red">Languages</span>
               <br />
-              Development
+              &amp; Fundamentals
             </h2>
           </div>
           <h3
@@ -69,8 +69,7 @@ export function Expertise() {
             <h2
               className={`${robotoMono.className} font-normal leading-6 pl-3 text-base border-l-2 border-white border-opacity-30 `}
             >
-              Experienced in both functional and OOP: C, C++, C#, JavaScript,
-              TypeScript.
+              JavaScript, TypeScript, Java, C, C++, HTML5, and CSS3.
             </h2>
           </div>
           <h3
@@ -85,10 +84,10 @@ export function Expertise() {
             <ReactIcon />
             <h2 className="font-semibold inline-block align-top">
               <span className="z-10 relative underline-blue">
-                Full-Stack Dev
+                Frontend
               </span>
               <br />
-              React,NextJs
+              React, Next.js
             </h2>
           </div>
           <h3
@@ -98,8 +97,7 @@ export function Expertise() {
             <h2
               className={`${robotoMono.className} font-normal leading-6 pl-3 text-base border-l-2 border-white border-opacity-30 `}
             >
-              Over 2 years of development experience in HTML, CSS, JavaScript,
-              React and NextJS frameworks.
+              React, Next.js, Vite, Tailwind CSS, and Flutter.
             </h2>
           </div>
           <h3
@@ -113,9 +111,9 @@ export function Expertise() {
           <div className="flex gap-10">
             <Figma className="w-10 h-10 stroke-[1.2px]" />
             <h2 className="font-semibold inline-block align-top">
-              <span className="z-10 relative underline-orange">UI/UX</span>
+              <span className="z-10 relative underline-orange">Tools</span>
               <br />
-              Figma
+              &amp; Design
             </h2>
           </div>
           <h3
@@ -125,8 +123,7 @@ export function Expertise() {
             <h2
               className={`${robotoMono.className} font-normal leading-6 pl-3 text-base border-l-2 border-white border-opacity-30 `}
             >
-              Passionate about UI/UX design with experience in creating
-              user-friendly interfaces using Figma.
+              Git, GitHub, REST APIs, SFTP, and Figma.
             </h2>
           </div>
           <h3
@@ -143,6 +140,67 @@ export function Expertise() {
             </p>
           </div>
         </div>
+      </motion.div>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.7 }}
+        className="flex w-full justify-center max-w-[733px] flex-wrap mx-auto "
+      >
+        <motion.div
+          variants={itemVariants}
+          className="px-8 py-10 flex-1 flex-shrink w-full border-[3px] min-h-7 border-solid border-r-[1.5px] border-[#a3a3a3] text-[26px]  leading-[1.2em]"
+        >
+          <div className="flex gap-6 ">
+            <Server size={42} strokeWidth={1.5} />
+            <h2 className="font-semibold inline-block align-top">
+              <span className="z-10 relative underline-purple">Backend</span>
+              <br />
+              Development
+            </h2>
+          </div>
+          <h3
+            className={`text-sm opacity-30 ${robotoMono.className}`}
+          >{`<h3>`}</h3>
+          <div className="pl-[15px] py-1">
+            <h2
+              className={`${robotoMono.className} font-normal leading-6 pl-3 text-base border-l-2 border-white border-opacity-30 `}
+            >
+              NestJS, Express.js, Spring Boot, Prisma ORM, and Socket.io.
+            </h2>
+          </div>
+          <h3
+            className={`text-sm opacity-30 ${robotoMono.className}`}
+          >{`</h3>`}</h3>
+        </motion.div>
+        <motion.div
+          variants={itemVariants}
+          className="px-8 py-10 flex-1 w-full border-[3px] min-h-7 border-solid border-l-[1.5px] border-[#a3a3a3] text-[26px]  leading-[1.2em]"
+        >
+          <div className="flex gap-10">
+            <Database size={42} strokeWidth={1.5} />
+            <h2 className="font-semibold inline-block align-top">
+              <span className="z-10 relative underline-green">Database</span>
+              <br />
+              &amp; Cloud
+            </h2>
+          </div>
+          <h3
+            className={`text-sm opacity-30 ${robotoMono.className}`}
+          >{`<h3>`}</h3>
+          <div className="pl-[15px] py-1">
+            <h2
+              className={`${robotoMono.className} font-normal leading-6 pl-3 text-base border-l-2 border-white border-opacity-30 `}
+            >
+              PostgreSQL, MongoDB, Firebase, DigitalOcean, and JWT-based
+              authentication.
+            </h2>
+          </div>
+          <h3
+            className={`text-sm opacity-30 ${robotoMono.className}`}
+          >{`</h3>`}</h3>
+        </motion.div>
       </motion.div>
       <div className="w-full  relative -top-10">
         <Image

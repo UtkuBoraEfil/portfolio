@@ -168,6 +168,26 @@ html {
   transition: all 0.3s ease-in-out;
 }
 
+.underline-red:hover::after,
+.underline-blue:hover::after,
+.underline-orange:hover::after,
+.underline-green:hover::after{
+  height: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.underline-green::after{
+  transition: all 0.1s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 13.5%;
+  z-index: -1;
+  height: 0.3em;
+  width: 104%;
+  left: -1%;
+  background: linear-gradient(65deg, #22C55E 0%, #22C55E 100%, rgba(255, 209, 0, 0) 100%);
+}
+
 
 .work-card-bg{
   background-color: rgba(136, 136, 136, .05);

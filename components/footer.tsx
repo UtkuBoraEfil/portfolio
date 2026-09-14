@@ -46,7 +46,9 @@ export function Footer() {
                 <a href="https://github.com/UtkuBoraEfil">Github</a>
               </li>
               <li className="hover:text-[#66d9ed] transition-all duration-500">
-                <a href="https://www.instagram.com/utqbora/">Instagram</a>
+                <a href="https://www.instagram.com/utku_bora_efil/">
+                  Instagram
+                </a>
               </li>
             </ul>
           </motion.div>
