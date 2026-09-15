@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import type { LottieRefCurrentProps } from "lottie-react";
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -14,25 +13,37 @@ export function PetverseShowcase() {
   const mockupRef = useRef<HTMLDivElement>(null);
   const lottieRef = useRef<LottieRefCurrentProps | null>(null);
 
-  // The animation JSON is ~570KB — only fetch it once this section is
-  // about to be scrolled into view, not eagerly on page load.
+  // The animation JSON is ~570KB — only fetch it once this section is about
+  // to be scrolled into view, not eagerly on page load. Once loaded, the
+  // same observer pauses the animation whenever it scrolls off-screen so it
+  // isn't burning CPU (and competing with scroll) while off-screen — the
+  // main source of the jank on mobile.
   useEffect(() => {
     const node = mockupRef.current;
     if (!node) return;
 
     let cancelled = false;
+    let fetched = false;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting) return;
-        observer.disconnect();
-        fetch("/images/phonesMockups.json")
-          .then((res) => res.json())
-          .then((data) => {
-            if (!cancelled) setAnimationData(data);
-          })
-          .catch(() => {
-            // Fails silently — the loading placeholder just stays in place.
-          });
+        if (entry.isIntersecting) {
+          if (!fetched) {
+            fetched = true;
+            fetch("/images/phonesMockups.json")
+              .then((res) => res.json())
+              .then((data) => {
+                if (!cancelled) setAnimationData(data);
+              })
+              .catch(() => {
+                // Fails silently — the loading placeholder just stays in place.
+              });
+          } else {
+            lottieRef.current?.play();
+          }
+        } else {
+          lottieRef.current?.pause();
+        }
       },
       { rootMargin: "200px" }
     );
@@ -64,7 +75,7 @@ export function PetverseShowcase() {
                 animationData={animationData}
                 loop
                 autoplay
-                onDOMLoaded={() => lottieRef.current?.setSpeed(0.5)}
+                onDOMLoaded={() => lottieRef.current?.setSpeed(0.85)}
                 className="w-full h-full scale-125"
               />
             ) : (
@@ -94,8 +105,10 @@ export function PetverseShowcase() {
             of your pet, get a 3D model of it, and walk it around a shared
             virtual park with other users.
           </p>
-          <Link
-            href="/petverse"
+          <a
+            href="https://www.petverse-presentation.site/"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`group inline-flex items-center gap-2 ${roboto.className} bg-[#9b37ff] rounded-sm px-6 py-3 font-light hover:opacity-90 hover:gap-3 transition-all duration-300 ease-in-out`}
           >
             View Project
@@ -103,7 +116,12 @@ export function PetverseShowcase() {
               size={16}
               className="transition-transform duration-300 ease-in-out group-hover:translate-x-1"
             />
-          </Link>
+          </a>
+          <p
+            className={`text-xs opacity-40 mt-3 ${roboto.className}`}
+          >
+            Best viewed on desktop
+          </p>
         </motion.div>
       </div>
     </div>
