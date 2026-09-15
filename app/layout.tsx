@@ -9,8 +9,21 @@ const inter = Poppins({ weight: "400", subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
-  title: "utkuboraefil",
+  metadataBase: new URL("https://utkuboraefil.com"),
+  title: "UtkuBora Efil",
   description: "my personal website",
+  openGraph: {
+    title: "UtkuBora Efil",
+    description: "my personal website",
+    url: "https://utkuboraefil.com",
+    siteName: "UtkuBora Efil",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UtkuBora Efil",
+    description: "my personal website",
+  },
 };
 
 export default function RootLayout({
