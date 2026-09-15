@@ -85,7 +85,7 @@ export function Footer() {
               wherever he works.
             </p>
             <h2 className="text-lg font-semibold">- Arda Kaan Aydilek</h2>
-            <p className="text-sm opacity-80">Full-Stack web developer</p>
+            <p className="text-sm opacity-80">Co-Founder of Hovr Yazılım</p>
           </div>
           <div className="sm:w-[55%] min-h-full">
             <div className="w-full p-8 bg-[#0067dc]">
@@ -126,22 +126,15 @@ export function Footer() {
                   alt="quote"
                   className="opacity-70 absolute left-0 top-0"
                 />
-                <Image
-                  src={"/images/referances/ardakaan.jpg"}
-                  height={40}
-                  width={50}
-                  alt="quote"
-                  className="rounded-full w-20 h-20 object-cover bg-center overflow-hidden border border-white "
-                />
               </div>
               <p className="py-10 opacity-80">
-                I've known Utku for a few years and we've worked together on
-                multiple university projects. He's always been reliable,
-                collaborative, and great at finding smart solutions under
-                pressure.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
               </p>
-              <h2 className="text-lg font-semibold">- </h2>
-              <p className="text-sm opacity-80"></p>
+              <h2 className="text-lg font-semibold">- Lorem Ipsum</h2>
+              <p className="text-sm opacity-80">Placeholder — pending approval</p>
             </div>
           </div>
         </div>
